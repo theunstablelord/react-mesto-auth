@@ -1,12 +1,13 @@
 .login__input {
   width: 358px;
-  margin: 0 0 23px;
+  margin: 0 0 32px;
   outline: none;
   border: none;
   background: none;
   border-bottom: 2px solid #ccc;
   color: #fff;
   font-size: 14px;
+  padding-bottom: 7px;
 }
 
 .login__input:last-of-type {

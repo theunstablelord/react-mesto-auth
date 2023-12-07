@@ -1,11 +1,11 @@
 function checkAnswer(res) {
-  if(res.ok) {
+  if (res.ok) {
     return res.json();
   }
   return Promise.reject(res.status);
 }
 
-export const BASE_URL = "https://auth.nomoreparties.co/";
+export const BASE_URL = "https://auth.nomoreparties.co";
 
 export function registerUser(email, password) {
   return fetch(`${BASE_URL}/signup`, {

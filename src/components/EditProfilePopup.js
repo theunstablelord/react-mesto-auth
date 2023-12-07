@@ -44,7 +44,7 @@ function EditProfiePopup(props) {
       >
       <input type="text" className="popup__input" id="user-name" name="name" placeholder="Как вас зовут?" required minLength="2" maxLength="40" value={name} onChange={handleNameChange} />
       <span className="popup__form-error" id="user-name-error" />
-      <input type="text" className="popup__input" id="user-about" name="info" placeholder="Чем вы занимаетесь?" required minLength="2" maxLength="200" value={description} onChange={handleDescriptionChange} ЫЫ/>
+      <input type="text" className="popup__input" id="user-about" name="info" placeholder="Чем вы занимаетесь?" required minLength="2" maxLength="200" value={description} onChange={handleDescriptionChange} />
       <span className="popup__form-error" id="user-about-error" />
     </PopupWithForm>
   )
