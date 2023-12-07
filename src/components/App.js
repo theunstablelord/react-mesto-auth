@@ -78,13 +78,15 @@ function App() {
   }, [isLoggedIn, navigate]);
 
   useEffect(() => {
-    Promise.all([api.getUserInfo(), api.getInitialCards()]).then(([user, cards]) => {
-      setCurrentUser(user);
-      setCards(cards);
-    }).catch((err) => {
-      console.error(err);
-    })
-  }, []) 
+    if (isLoggedIn) {
+      Promise.all([api.getUserInfo(), api.getInitialCards()]).then(([user, cards]) => {
+        setCurrentUser(user);
+        setCards(cards);
+      }).catch((err) => {
+        console.error(err);
+      })
+    }
+  }, [isLoggedIn]);
 
   function handleCardLike(card) {
     const isLiked = card.likes.some((i) => i._id === currentUser._id);
